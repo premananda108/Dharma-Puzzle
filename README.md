@@ -13,13 +13,3 @@ Download the zip of the repo and extract it to a folder. Open Godot 3.3.3-stable
 - Supports mouse and keyboard input   
 - Supports showing and hiding tile numbers
 
-# Screenshots
-### Start screen
-<img src="https://cdn.discordapp.com/attachments/360062738615107605/861879929963806721/unknown.png" />
-
-### Game screen
-<img src="https://cdn.discordapp.com/attachments/360062738615107605/861880393112223774/unknown.png" />
-
-
-## Support
-
