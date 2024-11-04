@@ -4,7 +4,7 @@ Classic slide puzzle game made with Godot game engine.
 <img alt="gdscript" src="https://img.shields.io/badge/-GODOT-478CBF?style=flat-square&logo=godotengine&logoColor=white" />
 
 # Installation
-Download the zip of the repo and extract it to a folder. Open Godot 3.3.2-stable, and click import then navigate to the extracted folder and click on the project folder then project.godot.
+Download the zip of the repo and extract it to a folder. Open Godot 3.3.3-stable, and click import then navigate to the extracted folder and click on the project folder then project.godot.
 
 
 # Features
