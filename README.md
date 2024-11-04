@@ -22,8 +22,4 @@ Download the zip of the repo and extract it to a folder. Open Godot 3.3.3-stable
 
 
 ## Support
-Join the Discord Server for Godot help / chat: [3ddelano Cafe](https://discord.gg/FZY9TqW)
-<br>
-<a href="https://www.buymeacoffee.com/3ddelano" target="_blank"><img height="41" width="174" src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" width="150" ></a>
-<br>
-<a href="https://patreon.com/3ddelano" target="_blank">Patreon</a> 
+
