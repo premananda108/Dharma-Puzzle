@@ -177,7 +177,7 @@ custom_styles/separator = SubResource( 5 )
 margin_top = 376.0
 margin_right = 328.0
 margin_bottom = 390.0
-text = "Game by Delano Lourenco"
+text = "Om Namah Shivaya"
 align = 1
 
 [node name="FileDialog" type="FileDialog" parent="M"]
@@ -191,9 +191,10 @@ window_title = "Open a File"
 mode = 0
 access = 2
 filters = PoolStringArray( "*.png", "*.jpeg", "*.jpg", "*.bmp", "*webp" )
-current_dir = "/Projects/Godot/Projects/SlidePuzzle/project/assets/backgrounds"
+show_hidden_files = true
+current_dir = "/22 Develop/Dharma-Puzzle/project"
 current_file = "deku.jpg"
-current_path = "/Projects/Godot/Projects/SlidePuzzle/project/assets/backgrounds/deku.jpg"
+current_path = "/22 Develop/Dharma-Puzzle/project/deku.jpg"
 
 [node name="PopupMessage" parent="M" instance=ExtResource( 4 )]
 
