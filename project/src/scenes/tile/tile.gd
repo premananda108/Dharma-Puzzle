@@ -53,3 +53,7 @@ func _on_Tile_pressed():
 # Tile has finished sliding
 func _on_Tween_tween_completed(_object, _key):
 	emit_signal("slide_completed", number)
+
+
+func _on_Tile_ready():
+	$Sprite.texture = Global.GlobalTexture

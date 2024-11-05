@@ -63,13 +63,13 @@ func show_image(image_path: String):
 		 # Настраиваем размер и свойства TextureButton
 		texture_button.rect_min_size = Vector2(100, 100)  # Размер кнопки, меняйте по необходимости  
 		 # Подключаем сигнал "pressed" к функции обработчика
-		texture_button.connect("pressed", self, "_on_texture_button_pressed", [texture_button])
+		texture_button.connect("pressed", self, "_on_texture_button_pressed", [original_texture])
 		
 		images_container.add_child(texture_button)
 	else:
 		print("Не удалось загрузить изображение:", image_path)
 
 # Функция-обработчик нажатия
-func _on_texture_button_pressed(button: TextureButton):
-	print(button)
+func _on_texture_button_pressed(image: Texture):
+	Global.GlobalTexture = image
 	var _error = get_tree().change_scene("res://src/scenes/game/game_scene.tscn")
