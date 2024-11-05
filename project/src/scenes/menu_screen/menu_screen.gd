@@ -57,11 +57,19 @@ func show_image(image_path: String):
 		img.resize(100, 100)  # Изменяем размер изображения до 100x100
 		var resized_texture = ImageTexture.new()
 		resized_texture.create_from_image(img)  # Создаём новую текстуру из изменённого изображения
-		
-		var texture_rect = TextureRect.new()
-		texture_rect.texture = resized_texture
-		texture_rect.rect_min_size = Vector2(100, 100)  # Устанавливаем размер рамки 100x100
 
-		images_container.add_child(texture_rect)
+		var texture_button = TextureButton.new()
+		texture_button.texture_normal = resized_texture
+		 # Настраиваем размер и свойства TextureButton
+		texture_button.rect_min_size = Vector2(100, 100)  # Размер кнопки, меняйте по необходимости  
+		 # Подключаем сигнал "pressed" к функции обработчика
+		texture_button.connect("pressed", self, "_on_texture_button_pressed", [texture_button])
+		
+		images_container.add_child(texture_button)
 	else:
 		print("Не удалось загрузить изображение:", image_path)
+
+# Функция-обработчик нажатия
+func _on_texture_button_pressed(button: TextureButton):
+	print(button)
+	var _error = get_tree().change_scene("res://src/scenes/game/game_scene.tscn")
