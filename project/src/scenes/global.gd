@@ -1,4 +1,4 @@
 extends Node
 
 var image_texture = null
-var tile_number = 4
+var number_of_tiles = 4

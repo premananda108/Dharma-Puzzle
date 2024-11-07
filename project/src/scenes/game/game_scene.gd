@@ -29,10 +29,10 @@ func _ready():
 	button_2.connect("pressed", self, "_on_button_pressed", [button_2])
 	button_3.connect("pressed", self, "_on_button_pressed", [button_3])
 
-	if Global.tile_number == 4:
+	if Global.number_of_tiles == 4:
 		button_1.pressed = true
 	else:
-		if Global.tile_number == 5:
+		if Global.number_of_tiles == 5:
 			button_2.pressed = true
 		else:
 			button_3.pressed = true	
@@ -45,18 +45,17 @@ func _on_button_pressed(selected_button: Button):
 	for button in [button_1, button_2, button_3]:
 		button.pressed = false
 	if selected_button == button_1:
-		Global.tile_number = 4
+		Global.number_of_tiles = 4
 	else: 
 		if selected_button == button_2:
-			Global.tile_number = 5
+			Global.number_of_tiles = 5
 		else:
-			Global.tile_number = 6
+			Global.number_of_tiles = 6
 	
 	# Включаем только нажатую кнопку
 	selected_button.pressed = true
 	
-	emit_signal("board_size_update", Global.tile_number)
-	#emit_signal("update_size", Global.tile_number)
+	emit_signal("board_size_update", Global.number_of_tiles)
 
 func _process(_delta):
 	if is_started:
