@@ -1,7 +1,7 @@
 extends Control
 
 # Указываем путь к папке с изображениями
-var folder_path_img = "assets/img"  
+var folder_path_img = "res://assets/img"  
 
 # Узел контейнера для изображений
 onready var images_container = $MarginContainer/ScrollContainer/ImagesContainer  # указываем путь к GridContainer

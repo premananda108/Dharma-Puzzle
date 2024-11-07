@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/discord_hover.png-5bc0fda64da2bdbab6457f2a30413f5a.stex"
+path="res://.import/Shiva_Shakti.png-0117bffef7131d4f06862cdc6a414096.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/discord_hover.png"
-dest_files=[ "res://.import/discord_hover.png-5bc0fda64da2bdbab6457f2a30413f5a.stex" ]
+source_file="res://assets/backgrounds/Shiva_Shakti.png"
+dest_files=[ "res://.import/Shiva_Shakti.png-0117bffef7131d4f06862cdc6a414096.stex" ]
 
 [params]
 

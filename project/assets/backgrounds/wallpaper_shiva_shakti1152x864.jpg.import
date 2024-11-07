@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/discord.png-050142d0d05356031368e6950290f8aa.stex"
+path="res://.import/wallpaper_shiva_shakti1152x864.jpg-d2ccc6232c014eb6b4b8474d5411f3bd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/discord.png"
-dest_files=[ "res://.import/discord.png-050142d0d05356031368e6950290f8aa.stex" ]
+source_file="res://assets/backgrounds/wallpaper_shiva_shakti1152x864.jpg"
+dest_files=[ "res://.import/wallpaper_shiva_shakti1152x864.jpg-d2ccc6232c014eb6b4b8474d5411f3bd.stex" ]
 
 [params]
 

@@ -92,7 +92,7 @@ anims/menu_in = SubResource( 2 )
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 350.0
-margin_bottom = 260.0
+margin_bottom = 400.0
 rect_min_size = Vector2( 316, 250 )
 size_flags_horizontal = 3
 size_flags_vertical = 2
@@ -101,8 +101,8 @@ __meta__ = {
 }
 
 [node name="ImagesContainer" type="GridContainer" parent="MarginContainer/ScrollContainer"]
-margin_left = 6.0
-margin_right = 322.0
+margin_left = 12.0
+margin_right = 328.0
 margin_bottom = 316.0
 rect_min_size = Vector2( 316, 316 )
 size_flags_horizontal = 6
