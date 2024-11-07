@@ -1,7 +1,7 @@
 extends Control
 
 # Указываем путь к папке с изображениями
-var folder_path = "res://img"  # замените "your_folder" на нужный путь
+var folder_path_img = "assets/img"  
 
 # Узел контейнера для изображений
 onready var images_container = $MarginContainer/ScrollContainer/ImagesContainer  # указываем путь к GridContainer
@@ -13,13 +13,16 @@ func _on_DiscordButton_pressed():
 func _on_WebsiteButton_pressed():
 	pass
 
-func _ready():
-	var image_files = list_images_in_directory(folder_path)
 	
+func _ready():
+	
+	var image_files = list_images_in_directory(folder_path_img)
+		
 	if image_files:
 		for image_path in image_files:
 			show_image(image_path)
 	else:
+		print(image_files)
 		print("Папка пуста или путь указан неверно")
 
 # Функция для получения списка изображений в указанной директории
@@ -28,13 +31,14 @@ func list_images_in_directory(path: String) -> Array:
 	var images = []
 	
 	if dir.open(path) == OK:
-		dir.list_dir_begin()
+		dir.list_dir_begin()  # Начинаем перебор содержимого папки
 		
-		var file_name = dir.get_next()
+		var file_name = dir.get_next()  # Получаем первый файл
 		while file_name != "":
-			if !dir.current_is_dir() and (file_name.ends_with(".png") or file_name.ends_with(".jpg")):
-				images.append(path + "/" + file_name)  # Сохраняем полный путь к файлу
-			file_name = dir.get_next()
+			# без учета ".import" после экспорта у меня не работает ... 
+			if !dir.current_is_dir() and (file_name.ends_with(".png.import") or file_name.ends_with(".jpg.import")):
+				images.append(path + "/" + file_name.replacen(".import", ""))  # Сохраняем полный путь к файлу
+			file_name = dir.get_next()  # Переходим к следующему элементу
 		
 		dir.list_dir_end()
 	else:

@@ -3,7 +3,8 @@
 [ext_resource path="res://assets/themes/custom_theme.tres" type="Theme" id=1]
 [ext_resource path="res://src/scenes/tile/tile.gd" type="Script" id=2]
 [ext_resource path="res://assets/fonts/roboto_r_20.tres" type="DynamicFont" id=3]
-[ext_resource path="res://img/Krishna1.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/img/01krishna.jpg" type="Texture" id=4]
+
 
 [sub_resource type="StyleBoxFlat" id=1]
 draw_center = false

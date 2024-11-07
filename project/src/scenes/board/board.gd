@@ -67,11 +67,12 @@ func is_board_solved():
 	return true
 
 func print_board():
-#	print('------board------')
-	for r in range(Global.number_of_tiles):
-		var row = ''
-		for c in range(Global.number_of_tiles):
-			row += str(board[r][c]).pad_zeros(2) + ' '
+	pass
+#print('------board------')
+#	for r in range(Global.number_of_tiles):
+#		var row = ''
+#		for c in range(Global.number_of_tiles):
+#			row += str(board[r][c]).pad_zeros(2) + ' '
 #		print(row)
 
 func value_to_grid(value):

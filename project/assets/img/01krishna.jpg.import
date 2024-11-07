@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1897647702135145.jpg-ec0393b5a310fef4835b552890d4da80.stex"
+path="res://.import/01krishna.jpg-32197a1417e0a5e066eb7a1736f56f7b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/1897647702135145.jpg"
-dest_files=[ "res://.import/1897647702135145.jpg-ec0393b5a310fef4835b552890d4da80.stex" ]
+source_file="res://assets/img/01krishna.jpg"
+dest_files=[ "res://.import/01krishna.jpg-32197a1417e0a5e066eb7a1736f56f7b.stex" ]
 
 [params]
 

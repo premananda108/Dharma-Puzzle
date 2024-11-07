@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/deku.jpg-5b907a925de57f20a269a9e8884d5b4c.stex"
+path="res://.import/ganesha.png-ec12c081fd57f0857c21399b50ccc38a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/deku.jpg"
-dest_files=[ "res://.import/deku.jpg-5b907a925de57f20a269a9e8884d5b4c.stex" ]
+source_file="res://assets/img/ganesha.png"
+dest_files=[ "res://.import/ganesha.png-ec12c081fd57f0857c21399b50ccc38a.stex" ]
 
 [params]
 
