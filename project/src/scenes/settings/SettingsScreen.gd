@@ -1,9 +1,9 @@
 extends MarginContainer
 
-signal board_size_update
-signal show_numbers_update
-signal hide_settings
-signal background_update
+#signal board_size_update
+#signal show_numbers_update
+#signal hide_settings
+#signal background_update
 
 onready var size_value = $M/V/M/G/SizeValue
 onready var file_dialog = $M/FileDialog
@@ -14,8 +14,8 @@ func _on_SizeSlider_value_changed(value):
 	emit_signal("board_size_update", value)
 
 
-func _on_ShowNumbers_toggled(button_pressed):
-	emit_signal("show_numbers_update", button_pressed)
+#func _on_ShowNumbers_toggled(button_pressed):
+#	emit_signal("show_numbers_update", button_pressed)
 
 
 func _on_BackButton_pressed():
@@ -40,3 +40,4 @@ func _on_FileDialog_file_selected(path):
 	texture.create_from_image(image, 0)
 	message_popup.popup()
 	emit_signal("background_update", texture)
+

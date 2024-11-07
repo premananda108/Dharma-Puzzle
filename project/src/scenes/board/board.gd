@@ -1,6 +1,6 @@
 extends Control
 
-export var size = 4
+#export var size = 4
 export var tile_size = 80
 export var tile_scene: PackedScene
 export var slide_duration = 0.15
@@ -29,6 +29,7 @@ signal moves_updated
 func gen_board():
 	var value = 1
 	board = []
+	var size = Global.tile_number
 	for r in range(size):
 		board.append([])
 		for c in range(size):
@@ -57,6 +58,7 @@ func gen_board():
 
 func is_board_solved():
 	var count = 1
+	var size = Global.tile_number
 	for r in range(size):
 		for c in range(size):
 			if (board[r][c] != count):
@@ -69,6 +71,7 @@ func is_board_solved():
 
 func print_board():
 	print('------board------')
+	var size = Global.tile_number
 	for r in range(size):
 		var row = ''
 		for c in range(size):
@@ -76,6 +79,7 @@ func print_board():
 		print(row)
 
 func value_to_grid(value):
+	var size = Global.tile_number
 	for r in range(size):
 		for c in range(size):
 			if (board[r][c] == value):
@@ -90,6 +94,7 @@ func get_tile_by_value(value):
 
 # testing
 func _ready():
+	var size = Global.tile_number
 	tile_size = floor(get_size().x / size)
 	set_size(Vector2(tile_size*size, tile_size*size))
 	gen_board()
@@ -98,6 +103,8 @@ func _on_Tile_pressed(number):
 	if is_animating:
 		return
 
+	var size = Global.tile_number
+	
 	# check if game is not started
 	if game_state == GAME_STATES.NOT_STARTED:
 		scramble_board()
@@ -177,6 +184,7 @@ func _on_Tile_pressed(number):
 
 func is_board_solvable(flat):
 	var parity = 0
+	var size = Global.tile_number
 	var grid_width = size
 	var row = 0
 	var blank_row = 0
@@ -205,6 +213,7 @@ func scramble_board():
 
 	# generate a flat board with values 0 to size*size-1
 	var temp_flat_board = []
+	var size = Global.tile_number
 	for i in range(size*size - 1, -1, -1):
 		temp_flat_board.append(i)
 
@@ -229,6 +238,7 @@ func scramble_board():
 func reset_board():
 	reset_move_count()
 	board = []
+	var size = Global.tile_number
 	for r in range(size):
 		board.append(([]))
 		for c in range(size):
@@ -246,6 +256,7 @@ func set_tile_position(r: int, c: int, val: int):
 func _process(_delta):
 	var is_pressed = true
 	var dir = Vector2.ZERO
+	var size = Global.tile_number
 	if (Input.is_action_just_pressed("move_left")):
 		dir.x = -1
 	elif (Input.is_action_just_pressed("move_right")):
@@ -327,7 +338,8 @@ func set_tile_numbers(state):
 		tile.set_number_visible(state)
 
 func update_size(new_size):
-	size = int(new_size)
+	var size = int(new_size)
+	Global.tile_number = size
 	print('updating board size ', size)
 
 	tile_size = floor(get_size().x / size)
@@ -340,6 +352,7 @@ func update_size(new_size):
 
 func update_background_texture(texture):
 	background_texture = texture
+	var size = Global.tile_number
 	for tile in tiles:
 		tile.set_sprite_texture(texture)
 		tile.update_size(size, tile_size)

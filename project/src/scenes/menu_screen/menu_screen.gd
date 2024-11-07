@@ -4,21 +4,14 @@ extends Control
 var folder_path = "res://img"  # замените "your_folder" на нужный путь
 
 # Узел контейнера для изображений
-onready var images_container = $ScrollContainer/ImagesContainer  # указываем путь к GridContainer
-
-#func _ready():
-#	$AnimationPlayer.play("menu_in")
+onready var images_container = $MarginContainer/ScrollContainer/ImagesContainer  # указываем путь к GridContainer
 
 func _on_DiscordButton_pressed():
-	var _error = OS.shell_open("https://discord.gg/FZY9TqW")
+	pass
 
 
 func _on_WebsiteButton_pressed():
-	var _error = OS.shell_open("https://delano-lourenco.web.app")
-
-
-func _on_Button_pressed():
-	var _error = get_tree().change_scene("res://src/scenes/game/game_scene.tscn")
+	pass
 
 func _ready():
 	var image_files = list_images_in_directory(folder_path)
@@ -71,5 +64,6 @@ func show_image(image_path: String):
 
 # Функция-обработчик нажатия
 func _on_texture_button_pressed(image: Texture):
-	Global.GlobalTexture = image
+	Global.image_texture = image
 	var _error = get_tree().change_scene("res://src/scenes/game/game_scene.tscn")
+

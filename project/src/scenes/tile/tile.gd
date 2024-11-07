@@ -56,4 +56,4 @@ func _on_Tween_tween_completed(_object, _key):
 
 
 func _on_Tile_ready():
-	$Sprite.texture = Global.GlobalTexture
+	$Sprite.texture = Global.image_texture

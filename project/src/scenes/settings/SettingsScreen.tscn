@@ -27,13 +27,13 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="."]
-margin_right = 336.0
-margin_bottom = 410.0
+margin_right = 360.0
+margin_bottom = 500.0
 custom_styles/panel = SubResource( 1 )
 
 [node name="M" type="MarginContainer" parent="."]
-margin_right = 336.0
-margin_bottom = 410.0
+margin_right = 360.0
+margin_bottom = 500.0
 custom_constants/margin_right = 4
 custom_constants/margin_top = 16
 custom_constants/margin_left = 4
@@ -42,11 +42,11 @@ custom_constants/margin_bottom = 4
 [node name="V" type="VBoxContainer" parent="M"]
 margin_left = 4.0
 margin_top = 16.0
-margin_right = 332.0
-margin_bottom = 406.0
+margin_right = 356.0
+margin_bottom = 496.0
 
 [node name="SettingsTitle" type="Label" parent="M/V"]
-margin_right = 328.0
+margin_right = 352.0
 margin_bottom = 43.0
 custom_fonts/font = ExtResource( 3 )
 text = "Settings"
@@ -55,7 +55,7 @@ valign = 1
 
 [node name="HS" type="HSeparator" parent="M/V"]
 margin_top = 47.0
-margin_right = 328.0
+margin_right = 352.0
 margin_bottom = 111.0
 custom_styles/separator = SubResource( 2 )
 custom_constants/separation = 64
@@ -65,7 +65,7 @@ __meta__ = {
 
 [node name="ShowNumbers" type="CheckButton" parent="M/V"]
 margin_top = 115.0
-margin_right = 328.0
+margin_right = 352.0
 margin_bottom = 155.0
 custom_styles/focus = SubResource( 3 )
 custom_fonts/font = ExtResource( 2 )
@@ -77,7 +77,7 @@ __meta__ = {
 
 [node name="HS2" type="HSeparator" parent="M/V"]
 margin_top = 159.0
-margin_right = 328.0
+margin_right = 352.0
 margin_bottom = 191.0
 custom_styles/separator = SubResource( 2 )
 custom_constants/separation = 32
@@ -87,14 +87,14 @@ __meta__ = {
 
 [node name="M" type="MarginContainer" parent="M/V"]
 margin_top = 195.0
-margin_right = 328.0
+margin_right = 352.0
 margin_bottom = 214.0
 custom_constants/margin_right = 8
 custom_constants/margin_left = 8
 
 [node name="G" type="GridContainer" parent="M/V/M"]
 margin_left = 8.0
-margin_right = 320.0
+margin_right = 344.0
 margin_bottom = 19.0
 columns = 4
 
@@ -105,8 +105,8 @@ custom_fonts/font = ExtResource( 2 )
 text = "Board Size"
 
 [node name="VS" type="VSeparator" parent="M/V/M/G"]
-margin_left = 163.0
-margin_right = 167.0
+margin_left = 187.0
+margin_right = 191.0
 margin_bottom = 19.0
 size_flags_horizontal = 10
 custom_styles/separator = SubResource( 4 )
@@ -115,8 +115,8 @@ __meta__ = {
 }
 
 [node name="SizeSlider" type="HSlider" parent="M/V/M/G"]
-margin_left = 171.0
-margin_right = 299.0
+margin_left = 195.0
+margin_right = 323.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 128, 0 )
 size_flags_horizontal = 4
@@ -129,38 +129,38 @@ __meta__ = {
 }
 
 [node name="SizeValue" type="Label" parent="M/V/M/G"]
-margin_left = 303.0
-margin_right = 312.0
+margin_left = 327.0
+margin_right = 336.0
 margin_bottom = 19.0
 custom_fonts/font = ExtResource( 2 )
 text = "4"
 
 [node name="VS" type="HSeparator" parent="M/V"]
 margin_top = 218.0
-margin_right = 328.0
+margin_right = 352.0
 margin_bottom = 248.0
 custom_styles/separator = SubResource( 5 )
 custom_constants/separation = 30
 
 [node name="FileButton" type="Button" parent="M/V"]
-margin_left = 73.0
+margin_left = 85.0
 margin_top = 252.0
-margin_right = 254.0
+margin_right = 266.0
 margin_bottom = 272.0
 size_flags_horizontal = 6
 text = "Choose Background Image"
 
 [node name="VS2" type="HSeparator" parent="M/V"]
 margin_top = 276.0
-margin_right = 328.0
+margin_right = 352.0
 margin_bottom = 306.0
 custom_styles/separator = SubResource( 5 )
 custom_constants/separation = 30
 
 [node name="BackButton" type="Button" parent="M/V"]
-margin_left = 132.0
+margin_left = 144.0
 margin_top = 310.0
-margin_right = 196.0
+margin_right = 208.0
 margin_bottom = 342.0
 rect_min_size = Vector2( 64, 32 )
 size_flags_horizontal = 4
@@ -168,23 +168,23 @@ text = "Back"
 
 [node name="VS3" type="HSeparator" parent="M/V"]
 margin_top = 346.0
-margin_right = 328.0
-margin_bottom = 372.0
+margin_right = 352.0
+margin_bottom = 462.0
 size_flags_vertical = 3
 custom_styles/separator = SubResource( 5 )
 
 [node name="Label" type="Label" parent="M/V"]
-margin_top = 376.0
-margin_right = 328.0
-margin_bottom = 390.0
+margin_top = 466.0
+margin_right = 352.0
+margin_bottom = 480.0
 text = "Om Namah Shivaya"
 align = 1
 
 [node name="FileDialog" type="FileDialog" parent="M"]
 margin_left = 4.0
-margin_top = 66.0
-margin_right = 332.0
-margin_bottom = 356.0
+margin_top = 111.0
+margin_right = 356.0
+margin_bottom = 401.0
 rect_min_size = Vector2( 270, 290 )
 size_flags_vertical = 6
 window_title = "Open a File"
@@ -198,6 +198,10 @@ current_path = "/22 Develop/Dharma-Puzzle/project/deku.jpg"
 
 [node name="PopupMessage" parent="M" instance=ExtResource( 4 )]
 visible = false
+margin_left = 40.0
+margin_top = 206.0
+margin_right = 320.0
+margin_bottom = 306.0
 
 [connection signal="toggled" from="M/V/ShowNumbers" to="." method="_on_ShowNumbers_toggled"]
 [connection signal="value_changed" from="M/V/M/G/SizeSlider" to="." method="_on_SizeSlider_value_changed"]
