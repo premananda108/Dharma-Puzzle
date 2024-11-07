@@ -2,8 +2,6 @@ extends Control
 
 signal board_size_update
 signal show_numbers_update
-signal hide_settings
-signal background_update
 
 var is_started = false
 var game_won = false
