@@ -12,7 +12,7 @@ config_version=4
 
 config/name="Dharma Puzzle"
 run/main_scene="res://src/scenes/menu_screen/menu_screen.tscn"
-boot_splash/image="res://assets/backgrounds/Shiva_Shakti.png"
+boot_splash/image="res://assets/backgrounds/11shiva_parvati_ganesha.png"
 config/icon="res://icon.png"
 
 [autoload]

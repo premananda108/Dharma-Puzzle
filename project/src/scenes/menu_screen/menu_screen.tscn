@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/themes/custom_theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/themes/kenneyUI.tres" type="Theme" id=1]
 [ext_resource path="res://src/scenes/menu_screen/menu_screen.gd" type="Script" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
@@ -37,7 +37,7 @@ tracks/1/keys = {
 [node name="MenuScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( 2 )
+theme = ExtResource( 1 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -46,6 +46,7 @@ __meta__ = {
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 1 )
 stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -54,6 +55,7 @@ __meta__ = {
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 1 )
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -67,6 +69,7 @@ margin_left = 10.0
 margin_top = 10.0
 margin_right = 350.0
 margin_bottom = 490.0
+theme = ExtResource( 1 )
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -74,10 +77,11 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="MarginContainer"]
 margin_left = 10.0
-margin_top = 466.0
+margin_top = 472.0
 margin_right = 350.0
 margin_bottom = 490.0
 size_flags_vertical = 12
+theme = ExtResource( 1 )
 text = "Dharma Puzzle"
 align = 1
 valign = 1
@@ -93,9 +97,10 @@ margin_left = 10.0
 margin_top = 10.0
 margin_right = 350.0
 margin_bottom = 400.0
-rect_min_size = Vector2( 316, 250 )
+rect_min_size = Vector2( 316, 390 )
 size_flags_horizontal = 3
 size_flags_vertical = 2
+theme = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -103,10 +108,11 @@ __meta__ = {
 [node name="ImagesContainer" type="GridContainer" parent="MarginContainer/ScrollContainer"]
 margin_left = 12.0
 margin_right = 328.0
-margin_bottom = 316.0
-rect_min_size = Vector2( 316, 316 )
+margin_bottom = 390.0
+rect_min_size = Vector2( 316, 390 )
 size_flags_horizontal = 6
-size_flags_vertical = 2
+size_flags_vertical = 3
+theme = ExtResource( 1 )
 custom_constants/vseparation = 3
 custom_constants/hseparation = 3
 columns = 3
