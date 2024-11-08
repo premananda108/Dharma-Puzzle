@@ -16,6 +16,8 @@ onready var overlay_text = $MarginContainer/VBoxContainer/GameView/StartOverlay/
 onready var move_value = $MarginContainer/VBoxContainer/StatsView/HBoxContainer/Moves/MoveValue
 onready var timer_value = $MarginContainer/VBoxContainer/StatsView/HBoxContainer/Time/TimeValue
 
+onready var texture_win = $MarginContainer/VBoxContainer/GameView/TextureRect
+
 # Узлы кнопок
 onready var button_1 = $MarginContainer/VBoxContainer/GridContainer/Button_1
 onready var button_2 = $MarginContainer/VBoxContainer/GridContainer/Button_2
@@ -41,6 +43,7 @@ func _ready():
 
 # Функция для обработки нажатия на кнопку
 func _on_button_pressed(selected_button: Button):
+	texture_win.visible = false	
 	# Проходимся по всем кнопкам и отключаем их
 	for button in [button_1, button_2, button_3]:
 		button.pressed = false
@@ -74,13 +77,26 @@ func _on_Board_game_started():
 
 
 func _on_Board_game_won():
-	overlay_text.text = 'Nice Work!\n Click to play again'
+	overlay_text.text = 'You Win!'
 	overlay.visible = true
 	is_started = false
 	game_won = true
 
+	# Создаем таймер и добавляем его как временный узел
+	var timer = Timer.new()
+	timer.wait_time = 2  # Устанавливаем время ожидания (2 секунды)
+	timer.one_shot = true  # Таймер срабатывает только один раз
+	add_child(timer)
+	timer.start()
+	# Используем yield, чтобы ждать, пока таймер завершится
+	yield(timer, "timeout")
+	
+	texture_win.texture = Global.image_texture
+	texture_win.visible = true
+
 
 func _on_RestartButton_pressed():
+	texture_win.visible = false	
 	if not is_started:
 		return
 	board.reset_move_count()
@@ -106,11 +122,11 @@ func _on_GameScene_show_numbers_update(state):
 
 
 func _on_SettingsButton_pressed():
-	anim_player.play("show_settings")
+	anim_player.play("")
 
 
 func _on_GameScene_hide_settings():
-	anim_player.play_backwards("show_settings")
+	anim_player.play_backwards("")
 
 
 func _on_GameScene_background_update(texture: ImageTexture):
@@ -122,4 +138,5 @@ func _on_CheckButton_toggled(button_pressed):
 
 
 func _on_BackButton_pressed():
+	texture_win.visible = false	
 	var _error = get_tree().change_scene("res://src/scenes/menu_screen/menu_screen.tscn")
